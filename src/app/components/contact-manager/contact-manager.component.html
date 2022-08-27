@@ -1,1 +1,29 @@
-<p>contact-manager works!</p>
+<div class="container-lg">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-5 text-primary my-3 font-weight-bold">My Contacts
+                <a [routerLink]="['/contacts/add']" routerLinkActive="router-link-active"  class="btn btn-danger btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> New</a>
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quaerat! 
+                Perferendis placeat tempora explicabo dignissimos ipsam quis aspernatur 
+                nostrum enim, recusandae nisi ipsa modi, nam voluptas sed aliquam a veniam. 
+                Cupiditate velit nobis quia blanditiis assumenda nam aperiam, culpa consequatur, 
+                corrupti obcaecati delectus praesentium dicta voluptates at quo, non saepe?
+            </p>
+            <form> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Search Contact..">
+                            </div>
+                            <div class="col">
+                                <input type="submit" class="btn btn-outline-dark" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
