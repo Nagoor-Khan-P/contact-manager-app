@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'contacts/add',component: AddContactComponent},
   {path:'contacts/edit/:contactId',component: EditContactComponent},
   {path:'contacts/view/:contactId',component: ViewContactComponent},
-  {path:'***', component: PageNotFoundComponent}
+  {path:'**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
