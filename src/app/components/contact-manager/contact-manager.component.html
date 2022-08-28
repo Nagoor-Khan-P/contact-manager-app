@@ -28,22 +28,40 @@
     </div>
 </div>
 
+<!--loading spinner -->
+
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+
+<!--loading spinner if any error occurs-->
+
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <h1 class="display-5 font-weight-bold text-danger">{{errorMessage}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--Cards Design-->
 
-<div class="container my-3">
+<div class="container-fluid my-3" *ngIf="!loading && contacts.length > 0">
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-6" *ngFor="let contact of contacts">
             <div class="card card-list-group-item-danger bg-info shadow-lg rounded-5 p-3 mb-5 bg-body rounded">
                 <div class="card-body align-items-center justify-content-center">
                     <div class="row">
                         <div class="col-sm-3 col-md-3">
-                            <img src="https://www.pinclipart.com/picdir/middle/116-1168985_male-icon-1stacy-dreher2017-08-01t16-business-clipart.png" class="img-fluid contact-img rounded-circle">
+                            <img [src]="contact.photo" class="img-fluid contact-img rounded-circle">
                         </div>
                         <div class="col-sm-8 col-md-7">
                             <ul class="list-group">
-                                <li class="list-group-item">Name: <span class="font-weight-bold">Nagoor Khan</span></li>
-                                <li class="list-group-item">Email: <span class="font-weight-bold">Nagoor Khan</span></li>
-                                <li class="list-group-item">Mobile No: <span class="font-weight-bold">Nagoor Khan</span></li>
+                                <li class="list-group-item">Name: <span class="font-weight-bold">{{contact.name}}</span></li>
+                                <li class="list-group-item">Email: <span class="font-weight-bold">{{contact.email}}</span></li>
+                                <li class="list-group-item">Mobile No: <span class="font-weight-bold">{{contact.mobile}}</span></li>
                               </ul>
                         </div>
                         <div class="col-sm-1 col-md-1 d-flex-colomn justify-content-center align-items-center">
