@@ -1,1 +1,65 @@
-<p>add-contact works!</p>
+<div class="container-lg my-3 justify-content-center align-content-center">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-5 text-primary">Add Contact</h1>
+            <p class="fw-italic text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt natus adipisci 
+                laborum sit numquam ea nesciunt obcaecati quo. Sed repudiandae quos exercitationem 
+                hic veniam suscipit expedita dicta doloribus, ex ea vel eligendi. Numquam, quaerat 
+                tempore!</p>
+        </div>
+    </div>
+</div>
+
+<!--Contact Form-->
+
+<div class="container-lg justify-content-center align-items-center">
+    <div class="row">
+        <div class="col col-sm-4">
+            <div class="mb-2">
+                <label for="name" class="font-weight-bold">Name:</label>
+                <input type="text" class="form-control" placeholder="Enter Name..">
+            </div>
+            <div class="mb-2">
+                <label for="email" class="font-weight-bold">Email:</label>
+                <input type="email" class="form-control" placeholder="e.g..nagoor@example.com">
+            </div>
+            <div class="mb-2">
+                <label for="mobile" class="font-weight-bold">Mobile No:</label>
+                <input type="tel" class="form-control" placeholder="+91 90******65">
+            </div>
+            <div class="mb-2">
+                <label for="group"></label>
+               <select class="form-control mt-2">
+                    <option value="group">Select Group</option>
+                    <option value="family">Family</option>
+                    <option value="friend">Friend</option>
+                    <option value="lover">Lover</option>
+               </select>
+            </div>
+            
+        </div>
+        <div class="col col-sm-4">
+            <div class="mb-2">
+                <label for="photo" class="font-weight-bold">Photo URL:</label>
+                <input type="text" class="form-control" placeholder="paste link..">
+            </div>
+            <div class="mb-2">
+                <label for="company" class="font-weight-bold">Company:</label>
+                <input type="text" class="form-control" placeholder="Enter Companyname..">
+            </div>
+            <div class="mb-2">
+                <label for="title" class="font-weight-bold">Title:</label>
+                <input type="text" class="form-control" placeholder="Enter Title..">
+            </div>
+            <div class="my-4">
+                <input type="submit" class="btn btn-success btn-lg" value="Create Contact">
+                <a [routerLink]="['/']"  class="btn btn-dark btn-lg mx-3">Close</a>
+
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <img src="https://www.pinclipart.com/picdir/middle/116-1168985_male-icon-1stacy-dreher2017-08-01t16-business-clipart.png" class="img-fluid contact-img">
+        </div>
+    </div>
+</div>
