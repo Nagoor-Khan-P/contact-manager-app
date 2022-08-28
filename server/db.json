@@ -7,7 +7,7 @@
             "photo" : "https://icon-library.com/images/avatar-icon-png/avatar-icon-png-25.jpg",
             "mobile" : "9014957265",
             "company" : "MAQ Software",
-            "Title" : "Software Engineer 1",
+            "title" : "Software Development Engineer 1",
             "groupId" : "2"
         },
         {
@@ -17,7 +17,7 @@
             "photo" : "https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg",
             "mobile" : "9014957265",
             "company" : "MAQ Software",
-            "Title" : "Software Engineer 1",
+            "title" : "ASE",
             "groupId" : "2"
         },
         {
@@ -25,50 +25,50 @@
             "name" : "Durga Prasad",
             "email" : "patannk07@gmail.com",
             "photo" : "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png",
-            "mobile" : "9014957265",
-            "company" : "MAQ Software",
-            "Title" : "Software Engineer 1",
-            "groupId" : "2"
+            "mobile" : "9877842345",
+            "company" : "TCS Software",
+            "title" : "Associate Software Engineer 1",
+            "groupId" : "3"
         },
         {
             "id" : "EMPH3196",
             "name" : "Mabu Khan Patan",
-            "email" : "patannk07@gmail.com",
+            "email" : "mabukhan07@gmail.com",
             "photo" : "https://spng.pngfind.com/pngs/s/38-380414_13-person-email-contacts-icon-images-people-icon.png",
-            "mobile" : "9014957265",
-            "company" : "MAQ Software",
-            "Title" : "Software Engineer 1",
+            "mobile" : "8555809783",
+            "company" : "Formar",
+            "title" : " Associate Software Engineer 1",
             "groupId" : "2"
         },
         {
             "id" : "EMPH0123",
             "name" : "Sri Chandana Karnati",
-            "email" : "patannk07@gmail.com",
+            "email" : "chandana@gmail.com",
             "photo" : "https://png.pngitem.com/pimgs/s/192-1924040_contact-profil-logo-png-transparent-png.png",
-            "mobile" : "9014957265",
+            "mobile" : "789745678",
             "company" : "MAQ Software",
-            "Title" : "Software Engineer 1",
-            "groupId" : "2"
+            "title" : "Software Engineer",
+            "groupId" : "1"
         },
         {
             "id" : "EMPH3198",
             "name" : "Soumik Mondal",
             "email" : "official.soumik@gmail.com",
             "photo" : "https://icon-library.com/images/contact-icon-png/contact-icon-png-5.jpg",
-            "mobile" : "9014957265",
+            "mobile" : "9879657876",
             "company" : "MAQ Software",
-            "Title" : "Software Engineer 1",
-            "groupId" : "2"
+            "title" : "Software Engineer 2",
+            "groupId" : "1"
         },
         {
             "id" : "EMPH3197",
             "name" : "Pavani Anumala",
             "email" : "pavania@gmail.com",
             "photo" : "https://cdn-icons-png.flaticon.com/512/206/206881.png",
-            "mobile" : "9014957265",
+            "mobile" : "6759987765",
             "company" : "MAQ Software",
-            "Title" : "Software Engineer 1",
-            "groupId" : "2"
+            "title" : "Software Engineer 1",
+            "groupId" : "1"
         }
     ],
     "groups" : [

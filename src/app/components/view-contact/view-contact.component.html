@@ -11,20 +11,38 @@
     </div>
 </div>
 
-<div class="container-lg my-5 bg-secondary rounded-3 shadow-lg">
+<!--loading spinner -->
+
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+
+<!--loading spinner if any error occurs-->
+
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <h1 class="display-5 font-weight-bold text-danger">{{errorMessage}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-lg my-5 bg-secondary rounded-3 shadow-lg" *ngIf="!loading && isEmpty()">
     <div class="row">
         <div class="col-lg-3 mt-5">
-            <img src="https://www.pinclipart.com/picdir/middle/116-1168985_male-icon-1stacy-dreher2017-08-01t16-business-clipart.png"
+            <img src="{{contact.photo}}"
                  class="img-fluid contact-img rounded-circle">
         </div>
         <div class="col-lg-9 mt-3">
             <ul class="list-group">
-                <li class="list-group-item list-group-item-danger">Name : <span class="font-weight-bold">Nagoor Khan Patan</span></li>
-                <li class="list-group-item list-group-item-danger">Email :<span class="font-weight-bold">nagoorkhan.patan2001@gmail.com</span></li>
-                <li class="list-group-item list-group-item-danger">Mobile No :<span class="font-weight-bold">9014957265</span></li>
-                <li class="list-group-item list-group-item-danger">Company :<span class="font-weight-bold">MAQ Software</span></li>
-                <li class="list-group-item list-group-item-danger">Title :<span class="font-weight-bold">Software Engineer 1</span></li>
-                <li class="list-group-item list-group-item-danger">Group Name :<span class="font-weight-bold">Family</span></li>
+                <li class="list-group-item list-group-item-danger">Name : <span class="font-weight-bold">{{contact.name}}</span></li>
+                <li class="list-group-item list-group-item-danger">Email :<span class="font-weight-bold">{{contact.email}}</span></li>
+                <li class="list-group-item list-group-item-danger">Mobile No :<span class="font-weight-bold">{{contact.mobile}}</span></li>
+                <li class="list-group-item list-group-item-danger">Company :<span class="font-weight-bold">{{contact.company}}</span></li>
+                <li class="list-group-item list-group-item-danger">Title :<span class="font-weight-bold">{{contact.title}}</span></li>
+                <li class="list-group-item list-group-item-danger">Group Name :<span class="font-weight-bold">{{group.name}}</span></li>
               </ul>
         </div>
     </div>

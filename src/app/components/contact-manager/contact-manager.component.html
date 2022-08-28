@@ -65,7 +65,7 @@
                               </ul>
                         </div>
                         <div class="col-sm-1 col-md-1 d-flex-colomn justify-content-center align-items-center">
-                            <a [routerLink]="['/contacts/view/:contactId']" class="btn btn-warning my-1">
+                            <a routerLink="/contacts/view/{{contact.id}}" class="btn btn-warning my-1">
                                 <i class="fa fa-eye"></i>
                             </a>
                             <a [routerLink]="['/contacts/edit/:contactId']" class="btn btn-primary my-1">
