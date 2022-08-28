@@ -10,56 +10,85 @@
     </div>
 </div>
 
+
+<!--loading spinner -->
+
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+
+<!--loading spinner if any error occurs-->
+
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <h1 class="display-5 font-weight-bold text-danger">{{errorMessage}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!--Contact Form-->
+
+<pre>{{contact | json}}</pre>
 
 <div class="container-lg justify-content-center align-items-center">
     <div class="row">
-        <div class="col col-sm-4">
-            <div class="mb-2">
-                <label for="name" class="font-weight-bold">Name:</label>
-                <input type="text" class="form-control" placeholder="Enter Name..">
+            <div class="col col-sm-6">
+                <form (submit)="createSubmit()">
+                    <div class="mb-2">
+                        <label for="name" class="font-weight-bold">Name:</label>
+                        <input [(ngModel)]="contact.name" name="name" 
+                            type="text" class="form-control" 
+                            placeholder="Enter Name.."
+                            required="true">
+                    </div>
+                    <div class="mb-2">
+                        <label for="email" class="font-weight-bold">Email:</label>
+                        <input [(ngModel)]="contact.email" 
+                                name="email" type="email" class="form-control" 
+                                placeholder="e.g..nagoor@example.com" required="true">
+                    </div>
+                    <div class="mb-2">
+                        <label for="mobile" class="font-weight-bold">Mobile No:</label>
+                        <input [(ngModel)]="contact.mobile" name="mobile" type="tel" 
+                                class="form-control" placeholder="+91 90******65" required="true">
+                    </div>
+                    <div class="mb-2">
+                        <label for="group" class="font-weight-bold">Select Group : </label>
+                    <select [(ngModel)]="contact.groupId" name="groupId" class="form-control" *ngIf="groups.length > 0">
+                            <option value="{{group.id}}" *ngFor="let group of groups">{{group.name}}</option>
+                    </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="photo" class="font-weight-bold">Photo URL:</label>
+                        <input [(ngModel)]="contact.photo" name="photo" type="text" 
+                                class="form-control" placeholder="paste link.."
+                                required="true">
+                    </div>
+                    <div class="mb-2">
+                        <label for="company" class="font-weight-bold">Company:</label>
+                        <input [(ngModel)]="contact.company" name="company" type="text" 
+                                class="form-control" placeholder="Enter Companyname.."
+                                required="true">
+                    </div>
+                    <div class="mb-2">
+                        <label for="title" class="font-weight-bold">Title:</label>
+                        <input [(ngModel)]="contact.title" name="title" type="text" 
+                                class="form-control" placeholder="Enter Title.."
+                                required="true">
+                    </div>
+                    <div class="my-4">
+                        <input type="submit" class="btn btn-success btn-lg" value="Create Contact">
+                        <a [routerLink]="['/']"  class="btn btn-dark btn-lg mx-3">Close</a>
+        
+                    </div>
+                </form>
             </div>
-            <div class="mb-2">
-                <label for="email" class="font-weight-bold">Email:</label>
-                <input type="email" class="form-control" placeholder="e.g..nagoor@example.com">
+            <div class="col-sm-4 my-5 mx-5">
+                <img [src]="contact.photo" class="img-fluid contact-img">
             </div>
-            <div class="mb-2">
-                <label for="mobile" class="font-weight-bold">Mobile No:</label>
-                <input type="tel" class="form-control" placeholder="+91 90******65">
-            </div>
-            <div class="mb-2">
-                <label for="group"></label>
-               <select class="form-control mt-2">
-                    <option value="group">Select Group</option>
-                    <option value="family">Family</option>
-                    <option value="friend">Friend</option>
-                    <option value="lover">Lover</option>
-               </select>
-            </div>
-            
-        </div>
-        <div class="col col-sm-4">
-            <div class="mb-2">
-                <label for="photo" class="font-weight-bold">Photo URL:</label>
-                <input type="text" class="form-control" placeholder="paste link..">
-            </div>
-            <div class="mb-2">
-                <label for="company" class="font-weight-bold">Company:</label>
-                <input type="text" class="form-control" placeholder="Enter Companyname..">
-            </div>
-            <div class="mb-2">
-                <label for="title" class="font-weight-bold">Title:</label>
-                <input type="text" class="form-control" placeholder="Enter Title..">
-            </div>
-            <div class="my-4">
-                <input type="submit" class="btn btn-success btn-lg" value="Create Contact">
-                <a [routerLink]="['/']"  class="btn btn-dark btn-lg mx-3">Close</a>
-
-            </div>
-
-        </div>
-        <div class="col-sm-4">
-            <img src="https://www.pinclipart.com/picdir/middle/116-1168985_male-icon-1stacy-dreher2017-08-01t16-business-clipart.png" class="img-fluid contact-img">
-        </div>
     </div>
 </div>
