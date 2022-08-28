@@ -1,0 +1,92 @@
+{
+    "contacts" : [
+        {
+            "id" : "EMPH3196",
+            "name" : "Nagoor Khan Patan",
+            "email" : "patannk07@gmail.com",
+            "photo" : "",
+            "mobile" : "9014957265",
+            "company" : "MAQ Software",
+            "Title" : "Software Engineer 1",
+            "groupId" : "2"
+        },
+        {
+            "id" : "EMPH3196",
+            "name" : "Nagoor Khan Patan",
+            "email" : "patannk07@gmail.com",
+            "photo" : "",
+            "mobile" : "9014957265",
+            "company" : "MAQ Software",
+            "Title" : "Software Engineer 1",
+            "groupId" : "2"
+        },
+        {
+            "id" : "EMPH3196",
+            "name" : "Nagoor Khan Patan",
+            "email" : "patannk07@gmail.com",
+            "photo" : "",
+            "mobile" : "9014957265",
+            "company" : "MAQ Software",
+            "Title" : "Software Engineer 1",
+            "groupId" : "2"
+        },
+        {
+            "id" : "EMPH3196",
+            "name" : "Nagoor Khan Patan",
+            "email" : "patannk07@gmail.com",
+            "photo" : "",
+            "mobile" : "9014957265",
+            "company" : "MAQ Software",
+            "Title" : "Software Engineer 1",
+            "groupId" : "2"
+        },
+        {
+            "id" : "EMPH3196",
+            "name" : "Nagoor Khan Patan",
+            "email" : "patannk07@gmail.com",
+            "photo" : "",
+            "mobile" : "9014957265",
+            "company" : "MAQ Software",
+            "Title" : "Software Engineer 1",
+            "groupId" : "2"
+        },
+        {
+            "id" : "EMPH3196",
+            "name" : "Nagoor Khan Patan",
+            "email" : "patannk07@gmail.com",
+            "photo" : "",
+            "mobile" : "9014957265",
+            "company" : "MAQ Software",
+            "Title" : "Software Engineer 1",
+            "groupId" : "2"
+        },
+        {
+            "id" : "EMPH3196",
+            "name" : "Nagoor Khan Patan",
+            "email" : "patannk07@gmail.com",
+            "photo" : "",
+            "mobile" : "9014957265",
+            "company" : "MAQ Software",
+            "Title" : "Software Engineer 1",
+            "groupId" : "2"
+        }
+    ],
+    "groups" : [
+        {
+            "id" : "1",
+            "name" : "Colleague"
+        },
+        {
+            "id" : "2",
+            "name" : "Family"
+        },
+        {
+            "id" : "3",
+            "name" : "Friend"
+        },
+        {
+            "id" : "4",
+            "name" : "Social"
+        }
+    ]
+}
