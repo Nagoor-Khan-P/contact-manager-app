@@ -79,6 +79,16 @@
       "company": "Google",
       "title": "SDE 3",
       "id": "41aCSxo"
+    },
+    {
+      "name": "Randi ",
+      "email": "Randi@123",
+      "mobile": "76567890",
+      "groupId": "4",
+      "photo": "https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg",
+      "company": "Amazon",
+      "title": "SDE!",
+      "id": "Biqkrt4"
     }
   ],
   "groups": [
