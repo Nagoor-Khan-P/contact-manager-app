@@ -1,65 +1,114 @@
 <div class="container-lg my-3 justify-content-center align-content-center">
-    <div class="row">
-        <div class="col">
-            <h1 class="display-5 text-primary">Edit Contact</h1>
-            <p class="fw-italic text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt natus adipisci 
-                laborum sit numquam ea nesciunt obcaecati quo. Sed repudiandae quos exercitationem 
-                hic veniam suscipit expedita dicta doloribus, ex ea vel eligendi. Numquam, quaerat 
-                tempore!</p>
-        </div>
+  <div class="row">
+    <div class="col">
+      <h1 class="display-5 text-primary">Edit Contact</h1>
+      <p class="fw-italic text-muted">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt natus
+        adipisci laborum sit numquam ea nesciunt obcaecati quo. Sed repudiandae
+        quos exercitationem hic veniam suscipit expedita dicta doloribus, ex ea
+        vel eligendi. Numquam, quaerat tempore!
+      </p>
     </div>
+  </div>
 </div>
 
 <!--Contact Form-->
 
 <div class="container-lg justify-content-center align-items-center">
-    <div class="row">
-        <div class="col col-sm-4">
-            <div class="mb-2">
-                <label for="name" class="font-weight-bold">Name:</label>
-                <input type="text" class="form-control" placeholder="Enter Name..">
-            </div>
-            <div class="mb-2">
-                <label for="email" class="font-weight-bold">Email:</label>
-                <input type="email" class="form-control" placeholder="e.g..nagoor@example.com">
-            </div>
-            <div class="mb-2">
-                <label for="mobile" class="font-weight-bold">Mobile No:</label>
-                <input type="tel" class="form-control" placeholder="+91 90******65">
-            </div>
-            <div class="mb-2">
-                <label for="group"></label>
-               <select class="form-control mt-2">
-                    <option value="group">Select Group</option>
-                    <option value="family">Family</option>
-                    <option value="friend">Friend</option>
-                    <option value="lover">Lover</option>
-               </select>
-            </div>
-            
+  <div class="row">
+    <div class="col col-sm-6">
+      <form (submit)="updateSubmit()">
+        <div class="mb-2">
+          <label for="name" class="font-weight-bold">Name:</label>
+          <input
+            [(ngModel)]="contact.name"
+            type="text"
+            name="name"
+            class="form-control"
+            required="true"
+            placeholder="Enter Name.."
+            value="{{ contact.name }}"
+          />
         </div>
-        <div class="col col-sm-4">
-            <div class="mb-2">
-                <label for="photo" class="font-weight-bold">Photo URL:</label>
-                <input type="text" class="form-control" placeholder="paste link..">
-            </div>
-            <div class="mb-2">
-                <label for="company" class="font-weight-bold">Company:</label>
-                <input type="text" class="form-control" placeholder="Enter Companyname..">
-            </div>
-            <div class="mb-2">
-                <label for="title" class="font-weight-bold">Title:</label>
-                <input type="text" class="form-control" placeholder="Enter Title..">
-            </div>
-            <div class="my-4">
-                <input type="submit" class="btn btn-success btn-lg" value="Update Contact">
-                <a [routerLink]="['/']"  class="btn btn-dark btn-lg mx-3">Close</a>
-
-            </div>
-
+        <div class="mb-2">
+          <label for="email" class="font-weight-bold">Email:</label>
+          <input
+            [(ngModel)]="contact.emial"
+            name="email"
+            type="email"
+            class="form-control"
+            required="true"
+            placeholder="e.g..nagoor@example.com"
+            value="{{ contact.email }}"
+          />
         </div>
-        <div class="col-sm-4">
-            <img src="https://www.pinclipart.com/picdir/middle/116-1168985_male-icon-1stacy-dreher2017-08-01t16-business-clipart.png" class="img-fluid contact-img">
+        <div class="mb-2">
+          <label for="mobile" class="font-weight-bold">Mobile No:</label>
+          <input
+            [(ngModel)]="contact.mobile"
+            name="mobile"
+            type="tel"
+            class="form-control"
+            required="true"
+            placeholder="+91 90******65"
+            value="{{ contact.mobile }}"
+          />
         </div>
+        <div class="mb-2">
+          <label for="group"></label>
+          <select [(ngModel)]="contact.groupId" name="groupId" class="form-control" *ngIf="groups.length > 0">
+            <option value="{{group.id}}" *ngFor="let group of groups">{{group.name}}</option>
+            </select>
+        </div>
+        <div class="mb-2">
+          <label for="photo" class="font-weight-bold">Photo URL:</label>
+          <input
+            [(ngModel)]="contact.photo"
+            name="photo"
+            type="text"
+            class="form-control"
+            required="true"
+            placeholder="paste link.."
+            value="{{ contact.photo }}"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="company" class="font-weight-bold">Company:</label>
+          <input
+            [(ngModel)]="contact.company"
+            name="company"
+            type="text"
+            class="form-control"
+            required="true"
+            placeholder="Enter Companyname.."
+            value="{{ contact.company }}"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="title" class="font-weight-bold">Title:</label>
+          <input
+            [(ngModel)]="contact.title"
+            name="title"
+            type="text"
+            class="form-control"
+            required="true"
+            placeholder="Enter Title.."
+            value="{{ contact.title }}"
+          />
+        </div>
+        <div class="my-4">
+          <input
+            type="submit"
+            class="btn btn-success btn-lg"
+            required="true"
+            value="Update Contact"
+          />
+          <a [routerLink]="['/']" class="btn btn-dark btn-lg mx-3">Close</a>
+        </div>
+      </form>
     </div>
+    <div class="col-sm-4">
+      <img src="{{ contact.photo }}" class="img-fluid contact-img rounded-circle"/>
+    </div>
+  </div>
 </div>
