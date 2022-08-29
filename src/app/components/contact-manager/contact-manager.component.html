@@ -1,83 +1,122 @@
 <div class="container-lg my-2">
-    <div class="row">
-        <div class="col">
-            <h1 class="display-5 text-primary my-3 font-weight-bold">My Contacts
-                <a [routerLink]="['/contacts/add']" routerLinkActive="router-link-active"  class="btn btn-danger btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> New</a>
-            </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quaerat! 
-                Perferendis placeat tempora explicabo dignissimos ipsam quis aspernatur 
-                nostrum enim, recusandae nisi ipsa modi, nam voluptas sed aliquam a veniam. 
-                Cupiditate velit nobis quia blanditiis assumenda nam aperiam, culpa consequatur, 
-                corrupti obcaecati delectus praesentium dicta voluptates at quo, non saepe?
-            </p>
-            <form> 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Search Contact..">
-                            </div>
-                            <div class="col">
-                                <input type="submit" class="btn btn-outline-dark" value="Search">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
+  <div class="row">
+    <div class="col">
+      <h1 class="display-5 text-primary my-3 font-weight-bold">
+        My Contacts
+        <a
+          [routerLink]="['/contacts/add']"
+          routerLinkActive="router-link-active"
+          class="btn btn-danger btn-sm"
+          ><i class="fa fa-plus-circle" aria-hidden="true"></i> New</a
+        >
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quaerat!
+        Perferendis placeat tempora explicabo dignissimos ipsam quis aspernatur
+        nostrum enim, recusandae nisi ipsa modi, nam voluptas sed aliquam a
+        veniam. Cupiditate velit nobis quia blanditiis assumenda nam aperiam,
+        culpa consequatur, corrupti obcaecati delectus praesentium dicta
+        voluptates at quo, non saepe?
+      </p>
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search Contact.."
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="submit"
+                  class="btn btn-outline-dark"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </div>
         </div>
+      </form>
     </div>
+  </div>
 </div>
 
 <!--loading spinner -->
 
 <div *ngIf="loading">
-    <app-spinner></app-spinner>
+  <app-spinner></app-spinner>
 </div>
 
 <!--loading spinner if any error occurs-->
 
 <div *ngIf="!loading && errorMessage">
-    <div class="container">
-        <div class="row">
-            <div class="container">
-                <h1 class="display-5 font-weight-bold text-danger">{{errorMessage}}</h1>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="container">
+        <h1 class="display-5 font-weight-bold text-danger">
+          {{ errorMessage }}
+        </h1>
+      </div>
     </div>
+  </div>
 </div>
 
 <!--Cards Design-->
 
 <div class="container-fluid my-3" *ngIf="!loading && contacts.length > 0">
-    <div class="row">
-        <div class="col-md-6" *ngFor="let contact of contacts">
-            <div class="card card-list-group-item-danger bg-info shadow-lg rounded-5 p-3 mb-5 bg-body rounded">
-                <div class="card-body align-items-center justify-content-center">
-                    <div class="row">
-                        <div class="col-sm-3 col-md-3">
-                            <img [src]="contact.photo" class="img-fluid contact-img rounded-circle">
-                        </div>
-                        <div class="col-sm-8 col-md-7">
-                            <ul class="list-group">
-                                <li class="list-group-item">Name: <span class="font-weight-bold">{{contact.name}}</span></li>
-                                <li class="list-group-item">Email: <span class="font-weight-bold">{{contact.email}}</span></li>
-                                <li class="list-group-item">Mobile No: <span class="font-weight-bold">{{contact.mobile}}</span></li>
-                              </ul>
-                        </div>
-                        <div class="col-sm-1 col-md-1 d-flex-colomn justify-content-center align-items-center">
-                            <a routerLink="/contacts/view/{{contact.id}}" class="btn btn-warning my-1">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                            <a routerLink="/contacts/edit/{{contact.id}}" class="btn btn-primary my-1">
-                                <i class="fa fa-pen"></i>
-                            </a>
-                            <button class="btn btn-danger my-1">
-                                <i class="fa fa-trash-restore-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let contact of contacts">
+      <div
+        class="card card-list-group-item-danger bg-info shadow-lg rounded-5 p-3 mb-5 bg-body rounded"
+      >
+        <div class="card-body align-items-center justify-content-center">
+          <div class="row">
+            <div class="col-sm-3 col-md-3">
+              <img
+                [src]="contact.photo"
+                class="img-fluid contact-img rounded-circle"
+              />
             </div>
+            <div class="col-sm-8 col-md-7">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Name: <span class="font-weight-bold">{{ contact.name }}</span>
+                </li>
+                <li class="list-group-item">
+                  Email:
+                  <span class="font-weight-bold">{{ contact.email }}</span>
+                </li>
+                <li class="list-group-item">
+                  Mobile No:
+                  <span class="font-weight-bold">{{ contact.mobile }}</span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="col-sm-1 col-md-1 d-flex-colomn justify-content-center align-items-center"
+            >
+              <a
+                routerLink="/contacts/view/{{ contact.id }}"
+                class="btn btn-warning my-1"
+              >
+                <i class="fa fa-eye"></i>
+              </a>
+              <a
+                routerLink="/contacts/edit/{{ contact.id }}"
+                class="btn btn-primary my-1"
+              >
+                <i class="fa fa-pen"></i>
+              </a>
+              <button class="btn btn-danger my-1" (click)="clickDeleteContact(contact.id)">
+                <i class="fa fa-trash-restore-alt"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
