@@ -25,3 +25,41 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+#Screen shots of the angular web application
+
+## Home Page
+
+![](outputimages/Home-Page.png)
+
+## Contacts list
+
+![](outputimages/Contacts-list.png)
+
+## To Add Contact
+
+![](outputimages/add-contact-page.png)
+
+## Create contact form
+
+![](outputimages/create-contact-form.png)
+
+## Added contact in the list
+
+![](outputimages/added-contact.png)
+
+## View Contact Page
+
+![](outputimages/view-contact-page.png)
+
+## Edit Contact Page
+
+![](outputimages/edit-contact-page.png)
+
+## Update Contact Form
+
+![](outputimages/update-contact-form.png)
+
+## Delete Contact
+
+![](outputimages/delete-contact-option.png)
