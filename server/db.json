@@ -11,16 +11,6 @@
       "groupId": "2"
     },
     {
-      "id": "O170108",
-      "name": "Shaziya Shaik",
-      "email": "patannk07@gmail.com",
-      "photo": "https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg",
-      "mobile": "7036345642",
-      "company": "TCS WIpro",
-      "title": "System Engineer",
-      "groupId": "2"
-    },
-    {
       "id": "TCS1076",
       "name": "Durga Prasad",
       "email": "patannk07@gmail.com",
@@ -41,16 +31,6 @@
       "groupId": "2"
     },
     {
-      "id": "EMPH0123",
-      "name": "Sri Chandana Karnati",
-      "email": "chandana@gmail.com",
-      "photo": "https://png.pngitem.com/pimgs/s/192-1924040_contact-profil-logo-png-transparent-png.png",
-      "mobile": "789745678",
-      "company": "MAQ Software",
-      "title": "Software Engineer",
-      "groupId": "1"
-    },
-    {
       "name": "Sohail Khan",
       "email": "sohail@google.com",
       "mobile": "855809783",
@@ -69,6 +49,16 @@
       "company": "Home",
       "title": "Home Owner",
       "id": "soK9Bwj"
+    },
+    {
+      "name": "Nagoor Khan Patan",
+      "email": "official.nagoork74@gmail.com",
+      "mobile": "9014957265",
+      "groupId": "3",
+      "photo": "https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg",
+      "company": "MAQ Software",
+      "title": "Software Engineer 1",
+      "id": "tukao3n"
     }
   ],
   "groups": [
